@@ -1,16 +1,568 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet"><title>HBNU_DED M250 Scan Pattern Dashboard</title><style>* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      body {
-        font-family: 'Inter', sans-serif;
-        background: transparent;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-      }</style><script defer="defer" src="/js/chunk-vendors.070fd0a6.js"></script><script defer="defer" src="/js/app.ad86db25.js"></script><link href="/css/app.4b0f099d.css" rel="stylesheet"></head><body><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>임성주 | 개발자 포트폴리오</title>
+  <meta name="description" content="누군가 실제로 쓰는 것을 만드는 한밭대학교 컴퓨터공학과 임성주의 포트폴리오입니다. 운영 중인 쇼핑몰, 학교 장비에서 쓰인 도구, 팀장으로 이끈 AI 서비스를 소개합니다." />
+  <meta property="og:title" content="임성주 | 개발자 포트폴리오" />
+  <meta property="og:description" content="누군가 실제로 쓰는 것을 만듭니다. 운영 중인 서비스, 실사용 도구, 팀장 프로젝트." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sungju1204.github.io/" />
+  <meta name="theme-color" content="#f6f5f1" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+  <!-- ===================== 헤더 ===================== -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="nav__logo" href="#top" aria-label="맨 위로">SJ<span>.</span></a>
+      <nav class="nav__links" aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#journey">성장</a>
+        <a href="#contact">연락</a>
+      </nav>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="다크 모드 전환">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2 6 6M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== 히어로 ===================== -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text reveal">
+          <p class="eyebrow">한밭대학교 컴퓨터공학과 · 3학년 · 임성주</p>
+          <h1>누군가<br /><mark>실제로 쓰는 것</mark>을<br />만듭니다.</h1>
+          <p class="lead">
+            과제로 끝나는 코드보다, 오늘도 누군가 열어보는 서비스를 만들고 싶습니다.
+            지금 제 옷을 팔고 있는 쇼핑몰, 학교 3D 프린터 작업에 쓰인 도구,
+            4명 팀을 이끌어 완성한 AI 서비스가 그 기록입니다.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
+            <a class="btn btn--ghost" href="https://github.com/Sungju1204" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <ul class="proof reveal" aria-label="한눈에 보는 성과">
+          <li class="proof__item">
+            <span class="badge badge--live"><i></i>운영 중</span>
+            <strong>Tokyo Collective</strong>
+            <span>내 옷을 실제로 파는 쇼핑몰 · 15분마다 자동 동기화</span>
+          </li>
+          <li class="proof__item">
+            <span class="badge badge--use">실사용</span>
+            <strong>DED-SCANPATH</strong>
+            <span>학교 DED M250 3D 프린터 작업에 사용된 도구</span>
+          </li>
+          <li class="proof__item">
+            <span class="badge badge--lead">팀장</span>
+            <strong>InfoMate</strong>
+            <span>4명 팀 · AI 가짜뉴스 판별 서비스 · 중간·최종 발표</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="wrap">
+        <dl class="stats reveal">
+          <div><dt>완성한 프로젝트</dt><dd data-count="4">4</dd></div>
+          <div><dt>지금 운영 중인 서비스</dt><dd data-count="1">1</dd></div>
+          <div><dt>현장에서 쓰인 도구</dt><dd data-count="1">1</dd></div>
+          <div><dt>팀장으로 이끈 팀원</dt><dd><span data-count="4">4</span>명</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== 소개 ===================== -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="kicker">01 · About</p>
+          <h2>이렇게 일합니다</h2>
+        </header>
+
+        <div class="principles">
+          <article class="card principle reveal">
+            <span class="principle__no">①</span>
+            <h3>쓰이는 것을 만든다</h3>
+            <p>기능 목록보다 "누가, 언제 쓰는가"에서 시작합니다. 판매용 쇼핑몰과 장비용 도구는 실제 사용자가 있었기 때문에 끝까지 완성할 수 있었습니다.</p>
+            <p class="evidence">근거 · Tokyo Collective, DED-SCANPATH</p>
+          </article>
+          <article class="card principle reveal">
+            <span class="principle__no">②</span>
+            <h3>실패를 먼저 설계한다</h3>
+            <p>잘 될 때보다 안 될 때 어떻게 동작할지를 먼저 정합니다. 동기화가 실패하면 반영하지 않고, 분석이 늦어지면 타임아웃과 재시도로 사용자를 안내합니다.</p>
+            <p class="evidence">근거 · 동기화 이중화, 타임아웃·캐싱·재시도</p>
+          </article>
+          <article class="card principle reveal">
+            <span class="principle__no">③</span>
+            <h3>함께 끝까지 간다</h3>
+            <p>팀장으로 역할을 나누고 마일스톤을 세웠고, 막힌 팀원의 파트는 같이 붙어서 해결했습니다. 동아리에서는 2년간 자금과 인원을 맡았습니다.</p>
+            <p class="evidence">근거 · InfoMate 팀장, 상상네이버스 임원</p>
+          </article>
+        </div>
+
+        <div class="profile reveal">
+          <div class="profile__row"><span>학력</span><p>한밭대학교 컴퓨터공학과 3학년 재학</p></div>
+          <div class="profile__row"><span>수상·장학</span><p>국가우수장학금(이공계) 수혜</p></div>
+          <div class="profile__row"><span>대외활동</span><p>봉사동아리 상상네이버스 임원 2년 — 2학년 총무부장(자금 관리, 지출 내역 보고서 작성), 3학년 인사부장(인원 관리, 행사별 참여 인원 취합·정리)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 기술 ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="kicker">02 · Skills</p>
+          <h2>어디에 써봤는지까지 보여드립니다</h2>
+          <p class="section__desc">기술 이름만 나열하지 않고, 각 기술을 실제로 쓴 프로젝트를 표시했습니다. ● 직접 구현 · ○ 팀 프로젝트에서 사용</p>
+        </header>
+
+        <div class="matrix-wrap reveal">
+          <table class="matrix">
+            <thead>
+              <tr>
+                <th scope="col">기술</th>
+                <th scope="col"><span>Tokyo<br />Collective</span></th>
+                <th scope="col"><span>InfoMate</span></th>
+                <th scope="col"><span>DED-<br />SCANPATH</span></th>
+                <th scope="col"><span>Image<br />Editor</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="grp"><th colspan="5" scope="colgroup">Frontend</th></tr>
+              <tr><th scope="row">Vue 3</th><td class="on">●</td><td class="on">●</td><td class="on">●</td><td class="on">●</td></tr>
+              <tr><th scope="row">Vite</th><td class="on">●</td><td class="on">●</td><td></td><td class="on">●</td></tr>
+              <tr><th scope="row">Vue Router · Pinia</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">Canvas API</th><td></td><td></td><td></td><td class="on">●</td></tr>
+              <tr class="grp"><th colspan="5" scope="colgroup">Backend · Data</th></tr>
+              <tr><th scope="row">Node.js · Express</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">Django</th><td></td><td class="team">○</td><td></td><td></td></tr>
+              <tr><th scope="row">SQLite · Turso</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">Supabase (PostgreSQL)</th><td></td><td></td><td class="on">●</td><td></td></tr>
+              <tr><th scope="row">웹 스크래핑</th><td class="on">●</td><td class="team">○</td><td></td><td></td></tr>
+              <tr class="grp"><th colspan="5" scope="colgroup">Infra · 협업</th></tr>
+              <tr><th scope="row">Vercel 서버리스</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">GitHub Actions · Cron</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">Docker Compose · Nginx</th><td></td><td class="team">○</td><td></td><td></td></tr>
+              <tr><th scope="row">Vitest</th><td class="on">●</td><td></td><td></td><td></td></tr>
+              <tr><th scope="row">Notion 일정 관리</th><td></td><td class="on">●</td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 프로젝트 ===================== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="kicker">03 · Projects</p>
+          <h2>대표 프로젝트</h2>
+          <p class="section__desc">각 프로젝트는 개요 · 구조 · 문제 해결 · 배운 점 순서로 볼 수 있습니다.</p>
+        </header>
+
+        <!-- ---------- Tokyo Collective ---------- -->
+        <article class="project reveal" id="tokyo">
+          <div class="project__head">
+            <div class="project__tags">
+              <span class="badge badge--live"><i></i>운영 중</span>
+              <span class="tag">개인 · 풀스택</span>
+              <span class="tag">2026.08 ~ 현재</span>
+            </div>
+            <h3>Tokyo Collective</h3>
+            <p class="project__one">제가 중고로 판매하는 빈티지 의류를 소개하는 쇼핑몰입니다. 중고 거래 플랫폼 FruitsFamily의 판매자 페이지와 15분마다 자동으로 동기화하고, 구매는 원본 판매 링크로 연결합니다.</p>
+            <div class="project__links">
+              <a href="https://tokyo-collective.vercel.app" target="_blank" rel="noopener">사이트 바로가기 ↗</a>
+              <a href="https://github.com/Sungju1204/tokyo-collective" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="gallery" data-gallery>
+            <img src="assets/tokyo-1.png" alt="Tokyo Collective 상품 목록 화면" />
+            <img src="assets/tokyo-3.png" alt="Tokyo Collective 관리자 대시보드" />
+          </div>
+
+          <div class="tabs" data-tabs>
+            <div class="tabs__list" role="tablist" aria-label="Tokyo Collective 상세">
+              <button role="tab" aria-selected="true">개요</button>
+              <button role="tab" aria-selected="false">구조</button>
+              <button role="tab" aria-selected="false">문제 해결</button>
+              <button role="tab" aria-selected="false">배운 점</button>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel">
+              <div class="cols">
+                <div>
+                  <h4>주요 기능</h4>
+                  <ul class="list">
+                    <li><b>쇼핑</b> 상품 목록, 장바구니, 주문 기록. 결제 없이 주문 정보만 저장하고 구매는 원본 링크로 연결</li>
+                    <li><b>관리자 대시보드</b> 로그인 후 상품 등록·수정·삭제, 주문 확인, 재고 관리</li>
+                    <li><b>자동 동기화</b> 신규 상품 등록, 품절·재입고 반영, 삭제된 상품 제거, 이름·가격 갱신</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>기술 스택</h4>
+                  <div class="chips">
+                    <span>Vue 3</span><span>Vue Router</span><span>Pinia</span><span>Vite</span><span>Node.js</span><span>Express</span><span>SQLite</span><span>Turso</span><span>Vercel</span><span>GitHub Actions</span><span>cron-job.org</span><span>Vitest</span>
+                  </div>
+                  <h4>역할</h4>
+                  <p class="muted">기획, 설계, 프론트엔드, 백엔드, 배포, 운영을 혼자 담당했습니다. AI 코딩 도구(Claude Code)로 개발 속도를 높이고, 핵심 로직은 직접 검증했습니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <figure class="diagram">
+                <svg viewBox="0 0 760 300" role="img" aria-labelledby="tkTitle">
+                  <title id="tkTitle">Tokyo Collective 시스템 구조: 브라우저가 Vercel의 Vue SPA와 Express API를 거쳐 Turso DB를 사용하고, 두 개의 크론이 15분마다 동기화 API를 호출해 FruitsFamily를 스크래핑합니다.</title>
+                  <defs>
+                    <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-arrowhead"/></marker>
+                  </defs>
+                  <rect x="250" y="20" width="270" height="190" rx="14" class="d-zone"/>
+                  <text x="264" y="42" class="d-zone-label">Vercel</text>
+
+                  <rect x="20" y="62" width="150" height="56" rx="10" class="d-node"/>
+                  <text x="95" y="95" class="d-text">사용자 브라우저</text>
+
+                  <rect x="280" y="56" width="210" height="50" rx="10" class="d-node d-node--accent"/>
+                  <text x="385" y="86" class="d-text">Vue 3 SPA</text>
+
+                  <rect x="280" y="136" width="210" height="50" rx="10" class="d-node d-node--accent"/>
+                  <text x="385" y="160" class="d-text">Express API</text>
+                  <text x="385" y="177" class="d-sub">서버리스 함수</text>
+
+                  <rect x="590" y="136" width="150" height="50" rx="10" class="d-node"/>
+                  <text x="665" y="166" class="d-text">Turso (libSQL)</text>
+
+                  <rect x="20" y="236" width="150" height="46" rx="10" class="d-node"/>
+                  <text x="95" y="256" class="d-text">cron-job.org</text>
+                  <text x="95" y="272" class="d-sub">주 경로</text>
+                  <rect x="190" y="236" width="150" height="46" rx="10" class="d-node"/>
+                  <text x="265" y="256" class="d-text">GitHub Actions</text>
+                  <text x="265" y="272" class="d-sub">백업</text>
+
+                  <rect x="590" y="236" width="150" height="46" rx="10" class="d-node d-node--ext"/>
+                  <text x="665" y="256" class="d-text">FruitsFamily</text>
+                  <text x="665" y="272" class="d-sub">판매자 페이지</text>
+
+                  <path d="M170 90 H278" class="d-edge" marker-end="url(#arr1)"/>
+                  <path d="M385 106 V134" class="d-edge" marker-end="url(#arr1)"/>
+                  <path d="M490 161 H588" class="d-edge" marker-end="url(#arr1)"/>
+                  <path d="M95 236 V212 H330 V188" class="d-edge d-edge--sync" marker-end="url(#arr1)"/>
+                  <path d="M265 236 V212" class="d-edge d-edge--sync"/>
+                  <path d="M470 188 V258 H588" class="d-edge d-edge--sync" marker-end="url(#arr1)"/>
+                  <text x="214" y="206" class="d-note">15분마다 동기화 요청</text>
+                  <text x="482" y="250" class="d-note" text-anchor="start">스크래핑</text>
+                </svg>
+                <figcaption>외부 크론 두 개가 15분마다 동기화 API를 호출하고, API가 판매자 페이지를 스크래핑해 DB에 반영합니다.</figcaption>
+              </figure>
+              <ul class="list">
+                <li>API는 인증 수준을 세 가지로 나눴습니다: 공개 조회 / 관리자 토큰 / 동기화 전용 시크릿 헤더</li>
+                <li>환경 변수 하나로 개발은 로컬 SQLite, 운영은 Turso를 쓰도록 전환됩니다</li>
+                <li>master 브랜치에 푸시하면 Vercel이 자동으로 배포합니다</li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <div class="story">
+                <div class="story__step"><span>문제</span><p>동기화가 한 번 빠지면 이미 팔린 옷이 사이트에 계속 남습니다. 반대로 스크래핑이 중간에 깨지면, 일부만 읽힌 목록 때문에 멀쩡한 상품이 사이트에서 사라질 수 있었습니다.</p></div>
+                <div class="story__step"><span>해결 1</span><p><b>스케줄러 이중화</b> cron-job.org를 주 경로로, GitHub Actions를 백업으로 두어 한쪽이 빠져도 동기화가 이어지게 했습니다.</p></div>
+                <div class="story__step"><span>해결 2</span><p><b>실패하면 반영하지 않기</b> 스크래핑이 실패하면 변경 사항을 DB에 쓰지 않고 이전 상태를 유지하도록 했습니다.</p></div>
+                <div class="story__step"><span>검증</span><p>네트워크와 DB 없이 도는 테스트(Vitest)로 동기화의 핵심 로직을 확인합니다.</p></div>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <ul class="list">
+                <li>실제로 물건을 파는 서비스에는 "잠깐 틀려도 되는 데이터"가 없었습니다. 기능보다 실패했을 때의 동작을 먼저 정하는 습관이 생겼습니다.</li>
+                <li>AI 도구로 개발 속도를 높이되, 스크래핑·동기화·인증처럼 서비스가 의존하는 로직은 직접 읽고 테스트로 확인해야 한다는 것을 배웠습니다.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- InfoMate ---------- -->
+        <article class="project reveal" id="infomate">
+          <div class="project__head">
+            <div class="project__tags">
+              <span class="badge badge--lead">팀장</span>
+              <span class="tag">4명 · 프론트엔드</span>
+              <span class="tag">2025.09 ~ 2025.12</span>
+            </div>
+            <h3>InfoMate</h3>
+            <p class="project__one">뉴스 URL을 넣으면 AI가 출처, 편향성, 광고성을 분석해 0~100점의 신뢰도를 알려주는 가짜뉴스 판별 서비스입니다. 팀장으로 4명 팀을 이끌고 프론트엔드를 맡았습니다.</p>
+            <div class="project__links">
+              <a href="https://github.com/Sungju1204/InfoMate" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="gallery" data-gallery>
+            <img src="assets/infomate-1.png" alt="InfoMate 링크 입력 화면" />
+            <img class="is-full" src="assets/infomate-2.png" alt="InfoMate 분석 결과 화면" />
+          </div>
+
+          <div class="tabs" data-tabs>
+            <div class="tabs__list" role="tablist" aria-label="InfoMate 상세">
+              <button role="tab" aria-selected="true">개요</button>
+              <button role="tab" aria-selected="false">구조</button>
+              <button role="tab" aria-selected="false">문제 해결</button>
+              <button role="tab" aria-selected="false">배운 점</button>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel">
+              <div class="cols">
+                <div>
+                  <h4>팀장으로 한 일</h4>
+                  <ul class="list">
+                    <li>4명의 역할(프론트엔드, 백엔드, 데이터 수집, 협업)을 나눴습니다</li>
+                    <li>프론트·백엔드 주차별 마일스톤을 세우고 Notion 작업 보드로 일정을 관리했습니다</li>
+                    <li>정기 회의를 진행하고 중간·최종 발표를 맡았습니다</li>
+                    <li>막힌 팀원의 파트는 같이 붙어서 해결했습니다. 백엔드 안정화 작업을 함께 진행했습니다</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>프론트엔드로 한 일</h4>
+                  <ul class="list">
+                    <li><b>API 통신 계층</b> 통신 코드를 <code>services/api.js</code>로 분리하고 API 주소를 환경 변수로 관리</li>
+                    <li><b>분석 요청 흐름</b> URL 유효성 검사, API 호출, Postman·CORS 확인을 거친 백엔드 연동</li>
+                    <li><b>결과 화면</b> AnalysisResult 컴포넌트 구현</li>
+                    <li><b>대기 경험</b> 로딩 스피너, 예상 소요 시간, 에러 메시지, 재시도 버튼</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chips chips--row">
+                <span>Vue 3</span><span>Vite</span><span>Axios</span><span>Notion</span><span class="chip--team">Django</span><span class="chip--team">BeautifulSoup</span><span class="chip--team">PyTorch · KLUE/roberta-small</span><span class="chip--team">Docker Compose</span><span class="chip--team">Nginx</span>
+              </div>
+              <p class="muted small">점선 표시는 팀 프로젝트에서 함께 쓴 기술입니다.</p>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <figure class="diagram">
+                <svg viewBox="0 0 760 200" role="img" aria-labelledby="imTitle">
+                  <title id="imTitle">InfoMate 구조: Vue 프론트엔드가 URL을 Django API로 보내면 BeautifulSoup으로 기사를 크롤링하고 KLUE/roberta-small 모델로 신뢰도를 추론해 JSON으로 돌려줍니다.</title>
+                  <defs>
+                    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-arrowhead"/></marker>
+                  </defs>
+                  <rect x="20" y="70" width="150" height="60" rx="10" class="d-node d-node--accent"/>
+                  <text x="95" y="97" class="d-text">Vue 3</text>
+                  <text x="95" y="115" class="d-sub">내 담당</text>
+                  <rect x="240" y="70" width="140" height="60" rx="10" class="d-node"/>
+                  <text x="310" y="105" class="d-text">Django API</text>
+                  <rect x="440" y="20" width="150" height="60" rx="10" class="d-node"/>
+                  <text x="515" y="47" class="d-text">크롤링</text>
+                  <text x="515" y="65" class="d-sub">BeautifulSoup</text>
+                  <rect x="440" y="120" width="150" height="60" rx="10" class="d-node"/>
+                  <text x="515" y="147" class="d-text">AI 추론</text>
+                  <text x="515" y="165" class="d-sub">KLUE/roberta-small</text>
+                  <rect x="640" y="70" width="100" height="60" rx="10" class="d-node d-node--ext"/>
+                  <text x="690" y="97" class="d-text">신뢰도</text>
+                  <text x="690" y="115" class="d-sub">0~100점</text>
+                  <path d="M170 92 H238" class="d-edge" marker-end="url(#arr2)"/>
+                  <path d="M238 112 H172" class="d-edge" marker-end="url(#arr2)"/>
+                  <text x="204" y="84" class="d-note">URL</text>
+                  <text x="204" y="128" class="d-note">JSON</text>
+                  <path d="M380 90 H410 V50 H438" class="d-edge" marker-end="url(#arr2)"/>
+                  <path d="M515 80 V118" class="d-edge" marker-end="url(#arr2)"/>
+                  <path d="M590 150 H615 V100 H638" class="d-edge" marker-end="url(#arr2)"/>
+                </svg>
+                <figcaption>기사 본문, 언론사, 발행일을 크롤링한 뒤 모델 추론 결과와 합쳐 JSON으로 돌려줍니다.</figcaption>
+              </figure>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <div class="story">
+                <div class="story__step"><span>문제</span><p>분석 한 번에 크롤링과 AI 추론을 차례로 거쳐 응답이 늦었습니다. 기다리는 동안 진행 상황을 알 수 없었고, 지연되면 응답이 오지 않기도 했습니다. 같은 기사도 매번 처음부터 분석했습니다.</p></div>
+                <div class="story__step"><span>프론트</span><p>로딩 스피너와 예상 소요 시간을 보여주고, 실패하면 원인별 에러 메시지와 재시도 버튼을 띄웠습니다.</p></div>
+                <div class="story__step"><span>백엔드</span><p>팀원과 함께 크롤링·추론에 타임아웃을 걸고, 같은 URL은 결과를 캐싱해 바로 돌려주게 했습니다. 응답 시간을 모니터링하며 추론 속도도 개선했습니다.</p></div>
+                <div class="story__step"><span>결과</span><p>응답 시간은 백엔드만의 문제가 아니라, 기다리는 동안 무엇을 보여주는지까지 포함한 문제라는 것을 배웠습니다.</p></div>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" hidden>
+              <ul class="list">
+                <li>파트를 나눠도 문제는 경계에서 생깁니다. API 요청·응답 형식과 에러 코드를 초기에 백엔드와 합의하고 문서화해 연동을 수월하게 만들었습니다.</li>
+                <li>팀장의 일은 일을 나누는 것에서 끝나지 않고, 막힌 곳을 먼저 찾아가 같이 푸는 것이라는 걸 배웠습니다.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- 작은 프로젝트 2개 ---------- -->
+        <div class="mini-grid">
+          <article class="project project--mini reveal" id="ded">
+            <div class="project__tags">
+              <span class="badge badge--use">실사용</span>
+              <span class="tag">개인</span>
+              <span class="tag">2025.08 ~ 2025.09</span>
+            </div>
+            <h3>DED-SCANPATH</h3>
+            <p class="project__one">학교 DED M250 3D 프린터용 스캔 패턴을 구성하고 NC 코드와 3D 프린팅 코드를 생성·관리하는 도구입니다. 실제 장비 작업에 사용되었습니다.</p>
+            <div class="mini-media">
+            <div class="gallery" data-gallery>
+              <img src="assets/ded-1.png" alt="DED-SCANPATH 스캔 패턴 구성 화면" />
+            </div>
+            <figure class="diagram diagram--mini">
+              <svg viewBox="0 0 360 150" role="img" aria-labelledby="dedTitle">
+                <title id="dedTitle">오프라인 모드: 온라인일 때는 Supabase에 저장하고, 연결이 끊기면 로컬 스토리지에 백업해 작업을 이어갑니다.</title>
+                <defs><marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="d-arrowhead"/></marker></defs>
+                <rect x="10" y="50" width="110" height="50" rx="10" class="d-node d-node--accent"/>
+                <text x="65" y="80" class="d-text">Vue 3 앱</text>
+                <rect x="230" y="12" width="120" height="46" rx="10" class="d-node"/>
+                <text x="290" y="40" class="d-text">Supabase</text>
+                <rect x="230" y="92" width="120" height="46" rx="10" class="d-node d-node--ext"/>
+                <text x="290" y="120" class="d-text">로컬 스토리지</text>
+                <path d="M120 66 H170 V35 H228" class="d-edge" marker-end="url(#arr3)"/>
+                <path d="M120 84 H170 V115 H228" class="d-edge d-edge--sync" marker-end="url(#arr3)"/>
+                <text x="176" y="28" class="d-note" text-anchor="start">온라인</text>
+                <text x="176" y="134" class="d-note" text-anchor="start">끊기면</text>
+              </svg>
+            </figure>
+            </div>
+            <ul class="list">
+              <li>사이클 생성·수정·삭제를 Supabase와 연동</li>
+              <li><b>오프라인 모드</b> 장비 옆에서 쓰는 도구라 연결이 끊겨도 로컬 스토리지 백업으로 작업이 이어지게 구현</li>
+              <li>NC 코드 할당, 3D 프린팅 코드 생성, 반응형 사이드바</li>
+            </ul>
+            <div class="chips"><span>Vue 3</span><span>Supabase</span><span>PostgreSQL</span><span>LocalStorage</span></div>
+            <div class="project__links"><a href="https://github.com/Sungju1204/DED-SCANPATH" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://sungju1204.github.io/DED-SCANPATH/" target="_blank" rel="noopener">직접 써보기 ↗</a></div>
+          </article>
+
+          <article class="project project--mini reveal" id="image-editor">
+            <div class="project__tags">
+              <span class="tag">개인</span>
+              <span class="tag">2025.11</span>
+            </div>
+            <h3>Image_Editor</h3>
+            <p class="project__one">사용자가 그은 수평·수직 선분을 기준으로 이미지의 원근을 보정하는 웹 앱입니다. 여러 장을 순서대로 보정하고 한 번에 내려받을 수 있습니다.</p>
+            <div class="gallery" data-gallery>
+              <img src="assets/image-editor-1.png" alt="Image_Editor 이미지 업로드 화면" />
+              <img src="assets/image-editor-2.png" alt="Image_Editor 수평·수직 선분 지정 화면" />
+              <img src="assets/image-editor-3.png" alt="Image_Editor 보정 결과 화면" />
+            </div>
+
+            <div class="homo" id="homo">
+              <div class="homo__stage" id="homoStage">
+                <div class="homo__plane" id="homoPlane" aria-hidden="true">
+                  <span>HANBAT</span>
+                </div>
+                <button class="homo__pt" data-i="0" aria-label="왼쪽 위 꼭짓점"></button>
+                <button class="homo__pt" data-i="1" aria-label="오른쪽 위 꼭짓점"></button>
+                <button class="homo__pt" data-i="2" aria-label="오른쪽 아래 꼭짓점"></button>
+                <button class="homo__pt" data-i="3" aria-label="왼쪽 아래 꼭짓점"></button>
+              </div>
+              <div class="homo__side">
+                <p class="homo__hint"><b>직접 해보기</b> 네 꼭짓점을 드래그해 보세요. 네 점의 대응 관계로 3×3 Homography 행렬을 풀어 평면을 변환합니다. Image_Editor의 원근 보정이 이 원리로 동작합니다.</p>
+                <pre class="homo__matrix" id="homoMatrix" aria-live="polite"></pre>
+                <button class="btn btn--ghost btn--sm" id="homoReset" type="button">원래대로</button>
+              </div>
+            </div>
+
+            <ul class="list">
+              <li><b>Homography 원근 변환</b> 지정한 선분으로 변환 행렬을 계산하고 Canvas API로 다시 그려 보정</li>
+              <li>다중 이미지 업로드, 드래그 앤 드롭, 개별·일괄 다운로드</li>
+              <li>업로드·캔버스·결과·선분 목록·이동을 컴포넌트 5개로 분리</li>
+            </ul>
+            <div class="chips"><span>Vue 3</span><span>Vite</span><span>Canvas API</span><span>선형대수</span></div>
+            <div class="project__links"><a href="https://github.com/Sungju1204/Image_Editor" target="_blank" rel="noopener">GitHub ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 성장 ===================== -->
+    <section class="section section--alt" id="journey">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="kicker">04 · Journey</p>
+          <h2>약 1년 동안 이렇게 넓혀 왔습니다</h2>
+          <p class="section__desc">혼자 만드는 도구에서, 팀을 이끄는 서비스, 그리고 혼자 운영하는 풀스택 서비스까지.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="reveal">
+            <time>2025.06 – 2026.01</time>
+            <h3>한밭대학교 스마트 3D프린팅 연구소</h3>
+            <p>연구실 랩실원으로 활동했습니다.</p>
+            <span class="tl-tag">연구실</span>
+          </li>
+          <li class="reveal">
+            <time>2025.08 – 09</time>
+            <h3>DED-SCANPATH</h3>
+            <p>학교 장비 작업에 실제로 쓰인 도구. 화면뿐 아니라 DB(Supabase) 연동과 연결이 끊겼을 때의 대응까지 설계했습니다.</p>
+            <span class="tl-tag">프론트엔드 + DB</span>
+          </li>
+          <li class="reveal">
+            <time>2025.09 – 12</time>
+            <h3>InfoMate</h3>
+            <p>팀장으로 4명의 일정과 역할을 설계하고, 프론트와 백엔드의 경계에서 생기는 문제를 함께 풀었습니다.</p>
+            <span class="tl-tag">팀 리딩 + API 연동</span>
+          </li>
+          <li class="reveal">
+            <time>2025.11</time>
+            <h3>Image_Editor</h3>
+            <p>선형대수 개념인 Homography 행렬을 직접 계산해 이미지 원근 보정 기능으로 옮겼습니다.</p>
+            <span class="tl-tag">알고리즘 + Canvas</span>
+          </li>
+          <li class="reveal is-now">
+            <time>2026.08 – 현재</time>
+            <h3>Tokyo Collective</h3>
+            <p>기획부터 서버, DB, 배포, 운영까지 혼자 맡은 풀스택 서비스. 지금도 실제 판매에 쓰고 있습니다.</p>
+            <span class="tl-tag">풀스택 + 운영</span>
+          </li>
+        </ol>
+
+        <div class="next reveal">
+          <h3>다음 목표</h3>
+          <ul class="list">
+            <li><b>측정하기</b> Tokyo Collective에 방문자 분석과 에러 모니터링을 붙여 동기화 성공률, 방문 수 같은 숫자를 쌓겠습니다.</li>
+            <li><b>숫자로 개선하기</b> 이미지 로딩 성능을 Lighthouse로 측정해 개선 전후를 비교하겠습니다.</li>
+            <li><b>깊이 이해하기</b> AI로 만든 코드도 핵심 로직은 직접 설명하고 테스트할 수 있을 때까지 파고들겠습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 연락 ===================== -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact__inner reveal">
+        <p class="kicker">05 · Contact</p>
+        <h2>함께 만들 것이 있다면</h2>
+        <p class="lead">프로젝트, 협업, 피드백 모두 환영합니다.</p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:cse090042@gmail.com">cse090042@gmail.com</a>
+          <a class="btn btn--ghost" href="https://github.com/Sungju1204" target="_blank" rel="noopener">github.com/Sungju1204 ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 임성주 · 프레임워크 없이 HTML · CSS · JavaScript로 제작</p>
+      <a href="#top">맨 위로 ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
